@@ -1,28 +1,36 @@
 
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% block content %}
-
-<!-- BOOKING FORM -->
-<h2>Booking for {{ train.name }}</h2>
-
-<div class="card">
-<form method="POST">
-    <input type="text" name="name" placeholder="Full Name" required>
-    <input type="number" name="age" placeholder="Age" required>
-    
-    <select name="gender">
-        <option>Male</option>
-        <option>Female</option>
-    </select>
-
-    <select name="berth">
-        <option>Lower</option>
-        <option>Middle</option>
-        <option>Upper</option>
-    </select>
-
-    <button type="submit">Confirm Booking</button>
-</form>
+<div class="search-box">
+    <h2>Booking for {{ train_name }}</h2>
+    <form method="POST">
+        <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" name="name" required>
+        </div>
+        <div class="form-group">
+            <label>Age</label>
+            <input type="number" name="age" required>
+        </div>
+        <div class="form-row-double">
+            <div class="form-group">
+                <label>Gender</label>
+                <select name="gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Berth Preference</label>
+                <select name="berth">
+                    <option value="Lower">Lower</option>
+                    <option value="Middle">Middle</option>
+                    <option value="Upper">Upper</option>
+                </select>
+            </div>
+        </div>
+        <button type="submit" class="btn-book">Confirm Booking</button>
+    </form>
 </div>
-
 {% endblock %}
