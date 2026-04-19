@@ -1,12 +1,17 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% block content %}
-
-<!-- TICKET CARD -->
-<div class="ticket-card">
-    <h2>Ticket Confirmed</h2>
-    <p><strong>PNR:</strong> {{ pnr }}</p>
-    <p><strong>Name:</strong> {{ name }}</p>
-    <p><strong>Train:</strong> {{ train }}</p>
-</div>
-
+<div class="ticket-box">
+    <div class="ticket-header">
+        <h2>E-Ticket Confirmed ✅</h2>
+        <img src="/static/images/ir-logo.png" width="50">
+    </div>
+    <div class="ticket-body">
+        <p><strong>PNR No:</strong> {{ pnr }}</p>
+        <p><strong>Passenger:</strong> {{ name }} | Age: {{ age }} | {{ gender }}</p>
+        <p><strong>Train:</strong> {{ train_no }} - {{ train_name }}</p>
+        <p><strong>From:</strong> {{ from_station }} | <strong>To:</strong> {{ to_station }}</p>
+        <p><strong>Date:</strong> {{ date }} | <strong>Class:</strong> {{ class }}</p>
+        <p><strong>Seat/Berth:</strong> {{ coach }} / {{ seat }} - {{ berth }} | <strong>Fare:</strong> ₹{{ fare }}</p>
+    </div>
+    <div class="ticket-footer">*** Happy Journey | Indian Railways ***</div>
 {% endblock %}
