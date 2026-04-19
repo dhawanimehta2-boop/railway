@@ -1,51 +1,80 @@
+
 body {
+    font-family: Arial;
     margin: 0;
-    font-family: Arial, sans-serif;
-   background: url('/static/train.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #333;
+    background: linear-gradient(to right, #003366, #005599);
+    color: white;
 }
 
-
 header {
-    background: #222;
-    color: white;
+    display: flex;
+    align-items: center;
     padding: 15px;
-    text-align: center;
+    background: #003366;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 10px;
 }
 
 .container {
     padding: 20px;
+}
+
+.banner {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+
+input, select {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+button, .btn {
+    background: #FF7722;
+    color: white;
+    padding: 10px;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+button:hover, .btn:hover {
+    background: #e65c00;
+}
+
+table {
+    width: 100%;
+    background: white;
+    color: black;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 10px;
     text-align: center;
 }
 
-button {
-    background: #ff4b2b;
-    border: none;
-    padding: 10px 20px;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-button:hover {
-    background: #ff416c;
-}
-img {
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-
-form {
+.ticket-card {
     background: white;
+    color: black;
     padding: 20px;
-    border-radius: 10px;
-    display: inline-block;
-}
-
-input {
-    margin: 10px;
-    padding: 8px;
-    width: 200px;
+    border-radius: 12px;
 }
