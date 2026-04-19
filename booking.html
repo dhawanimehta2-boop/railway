@@ -1,25 +1,28 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Book Ticket</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-    <button><i class="fas fa-ticket-alt"></i> Book Ticket</button>
 
-<header>
-    <h1>Ticket Booking</h1>
-</header>
+{% extends 'base.html' %}
+{% block content %}
 
-<div class="container">
-    <form method="POST">
-        <input type="text" name="name" placeholder="Your Name" required><br>
-        <input type="text" name="source" placeholder="From" required><br>
-        <input type="text" name="destination" placeholder="To" required><br>
-        <input type="date" name="date" required><br>
-        <button type="submit">Confirm Booking</button>
-    </form>
+<!-- BOOKING FORM -->
+<h2>Booking for {{ train.name }}</h2>
+
+<div class="card">
+<form method="POST">
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="number" name="age" placeholder="Age" required>
+    
+    <select name="gender">
+        <option>Male</option>
+        <option>Female</option>
+    </select>
+
+    <select name="berth">
+        <option>Lower</option>
+        <option>Middle</option>
+        <option>Upper</option>
+    </select>
+
+    <button type="submit">Confirm Booking</button>
+</form>
 </div>
 
-</body>
-</html>
+{% endblock %}
