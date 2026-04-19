@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- TRAIN RESULTS -->
+<h2>Available Trains</h2>
+<table>
+    <tr>
+        <th>No</th>
+        <th>Name</th>
+        <th>Time</th>
+        <th>Action</th>
+    </tr>
+    {% for train in trains %}
+    <tr>
+        <td>{{ train.no }}</td>
+        <td>{{ train.name }}</td>
+        <td>{{ train.time }}</td>
+        <td><a href="/book/{{ train.no }}" class="btn">Book Now</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
