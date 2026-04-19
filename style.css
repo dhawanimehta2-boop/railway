@@ -1,80 +1,91 @@
-
-body {
-    font-family: Arial;
+* {
     margin: 0;
-    background: linear-gradient(to right, #003366, #005599);
-    color: white;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-header {
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #002B5B; /* Indian Railway Blue */
+}
+.header {
+    background: #003366;
+    color: white;
+    padding: 15px 30px;
+    font-size: 24px;
+    font-weight: bold;
     display: flex;
     align-items: center;
-    padding: 15px;
-    background: #003366;
+    gap: 15px;
 }
-
-.logo {
-    height: 50px;
-    margin-right: 10px;
-}
-
-.container {
-    padding: 20px;
-}
-
 .banner {
     width: 100%;
-    border-radius: 12px;
-    margin-bottom: 20px;
+    height: 350px;
+    object-fit: cover;
+    filter: brightness(0.7);
 }
-
-.card {
+.search-box {
     background: white;
-    color: black;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    width: 480px;
+    margin: -100px auto 40px;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 10;
 }
-
-input, select {
+.search-box h2 { color: #003366; text-align: center; margin-bottom: 20px; }
+.form-group { margin-bottom: 15px; }
+.form-group label {
     display: block;
-    width: 100%;
-    margin: 10px 0;
-    padding: 10px;
+    font-size: 14px;
+    color: #003366;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
-
-button, .btn {
-    background: #FF7722;
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+.form-row-double { display: flex; gap: 15px; }
+.form-row-double .form-group { flex: 1; }
+.btn-book {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(45deg, #FF7722, #ff9944);
     color: white;
-    padding: 10px;
     border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
     text-decoration: none;
     display: inline-block;
-    margin-top: 10px;
-    cursor: pointer;
-    border-radius: 8px;
-}
-
-button:hover, .btn:hover {
-    background: #e65c00;
-}
-
-table {
-    width: 100%;
-    background: white;
-    color: black;
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-th, td {
-    padding: 10px;
     text-align: center;
+    transition: 0.3s;
 }
-
-.ticket-card {
-    background: white;
-    color: black;
-    padding: 20px;
-    border-radius: 12px;
+.btn-book:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(255, 119, 34, 0.5);
 }
+.page-title { color: white; text-align: center; margin: 30px 0; }
+.train-card {
+    background: white; width: 80%; margin: 20px auto; padding: 20px;
+    border-radius: 12px; display: flex; justify-content: space-between; align-items: center;
+}
+.train-info h3 { color: #003366; margin-bottom: 8px; }
+.train-info p { color: #555; margin: 4px 0; }
+.ticket-box { 
+    background: white; width: 600px; margin: 30px auto; 
+    border-radius: 10px; border: 2px dashed #003366; 
+}
+.ticket-header { 
+    background: #003366; color: white; padding: 15px; 
+    display: flex; justify-content: space-between; align-items: center; border-radius: 8px 8px 0 0; 
+}
+.ticket-body { padding: 25px; line-height: 1.8; font-size: 16px; }
+.ticket-body p { margin: 8px 0; }
+.ticket-footer { text-align: center; padding: 10px; background: #f0f0f0; font-weight: bold; border-radius: 0 0 8px 8px; }
+.container { min-height: 80vh; padding-bottom: 40px; }
